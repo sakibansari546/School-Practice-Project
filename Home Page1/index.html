@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/School Project/Home Page1/style.css">
+    <link rel="stylesheet" href="/School Project/Home Page1/Registration Form/style.css">
+    <!-- <link rel="stylesheet" href="/GIT & GIT HUB/Home Page/LogIn-Form/style.css"> -->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                Logo
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Service</a></li>
+                </ul>
+                <div class="signing-btns">
+                    <button class="LogIn" id="logIn-btn"><a>LogIn</a></button>
+                    <button class="SignUp" id="signUp-btn"><a>SIgnUp</a></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="left-container">
+                <div class="left-content">
+                    <div class="heading-container">
+                        <div class="heading">
+                            <h2>Smart Bot.</h2>
+                            <h2>Happy People.</h2>
+                        </div>
+                    </div>
+                    <div class="paragraph">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nam at nemo rem iure aut
+                            sunt voluptates, accusamus corporis, dolorum impedit amet illo deleniti similique ex sequi
+                            dicta nihil repellat.</p>
+                    </div>
+                    <div class="hero-button-container">
+                        <button class="">Demo!</button>
+                        <button>On Demond!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="right-content">
+                    <img src="/School Project/Home Page1/image/fd7e3d69-44e4-43f5-b843-786104a42fe8.png" alt="">
+                    <div class="robot-hi-text">
+                        <h4>HI!</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="main-contaier" id="register-container">
+        <div id="register" class="login-container register-container">
+            <h2>Register</h2>
+            <form id="registeration-form">
+                <div class="input-container">
+                    <input type="text" id="name" placeholder="Name">
+                    <span class="icon"><i class="fa-solid fa-user" id="nameIcon"></i></span>
+                    <span style="display: none;" class="icon name-tick-icon"><i
+                            class="fa-regular fa-circle-check"></i></span>
+                </div>
+
+                <div class="input-container">
+                    <input type="email" id="email" placeholder="Email">
+                    <span class="icon"><i class="fa-regular fa-envelope" id="emailIcon"></i></i></span>
+                    <span style="display: none;" class="icon tick"><i class="fa-regular fa-circle-check"></i></span>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="password" placeholder="Password">
+                    <span class="icon" id="passwordIcon" onclick="togglePasswordVisibility()"><i
+                            class="fa-regular fa-eye"></i></span>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="Cpassword" placeholder="Confirm Password">
+                    <span class="icon" id="CpasswordIcon" onclick="toggleConPasswordVisibility()"><i
+                            class="fa-regular fa-eye"></i></span>
+                </div>
+
+                <div class="info">
+                    <div class="remember-feild">
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">Remember</label>
+                    </div>
+                    <div class="forget">
+                        <p>Forgot Password?</p>
+                    </div>
+                </div>
+                <button type="submit" class="register-btn">Register</button>
+                <div class="register-div">
+                    <p>Don't have an account? <a href="">LigIn</a></p>
+                </div>
+
+                <div class="close-button">
+                    <img src="https://img.icons8.com/?size=256&id=71200&format=png" alt="">
+                </div>
+            </form>
+        </div>
+
+
+
+
+        <div class="register-submit-container submit-container">
+            <div class="bg-container">
+                <div class="register-icon-error icon-error">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="register-valid-input valid-input">Enter Valid Input</div>
+                <div class="register-valid-error valid-error">signUp error</div>
+                <button class="ok-btn">Ok</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-contaier" id="login-main-container">
+        <div id="register" class="login-container register-container">
+            <h2>LogIn</h2>
+            <form id="login-form">
+
+                <div class="input-container">
+                    <input type="email" id="login-email" placeholder="Email">
+                    <span class="icon"><i class="fa-regular fa-envelope" id="login-emailIcon"></i></i></span>
+                    <span style="display: none;" id="login-tickIcon" class="icon tick"><i
+                            class="fa-regular fa-circle-check"></i></span>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="login-password" placeholder="Password">
+                    <span class="icon" id="login-passwordIcon" onclick="loginTogglePasswordVisibility()"><i
+                            class="fa-regular fa-eye"></i></span>
+                </div>
+
+                <div class="info">
+                    <div class="remember-feild">
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">Remember</label>
+                    </div>
+                    <div class="forget">
+                        <p>Forgot Password?</p>
+                    </div>
+                </div>
+                <button type="submit" class="register-btn">Login</button>
+                <div class="register-div">
+                    <p>Don't have an account? <a href="">LigIn</a></p>
+                </div>
+
+                <div id="login-close-button" class="close-button">
+                    <img src="https://img.icons8.com/?size=256&id=71200&format=png" alt="">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="register-submit-container submit-container" id="login-submit-container">
+            <div class="bg-container">
+                <div id="login-icon-error" class="register-icon-error icon-error">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="register-valid-input valid-input" id="login-valid-input">Enter Valid Input</div>
+                <div class="register-valid-error valid-error" id="login-valid-error">Login error</div>
+                <button class="ok-btn" id="login-ok-btn">Ok</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="/GIT & GIT HUB/Home Page/LogIn-Form/script.js"></script> -->
+    <script src="/School Project/Home Page1/Registration Form/script.js"></script>
+    <script src="/School Project/Home Page1/Registration Form/Login-script.js"></script>
+    <script src="/School Project/Home Page1/script.js"></script>
+
+</body>
+
+</html>
