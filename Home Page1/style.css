@@ -150,3 +150,43 @@ header nav .signing-btns button:last-child a {
     top: 20px;
     right: 84px;
 }
+
+
+
+
+.service-container {
+    width: 80vw;
+    margin: 5rem auto;
+}
+
+.service-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 28px;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    text-align: left;
+    width: 18vw;
+    background: beige;
+    padding: 10px 20px;
+}
+
+.card .img,
+.card img {
+    width: 18vw;
+}
+
+.card h4 {
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 14px;
+}
