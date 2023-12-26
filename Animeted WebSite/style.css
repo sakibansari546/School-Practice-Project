@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+}
+
+#page1 {
+    height: 100%;
+    width: 100%;
+    background: whitesmoke;
+    position: relative;
+}
+
+#cursor {
+    height: 7.5vw;
+    width: 7.5vw;
+    background: #FF5F38;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    /* left: 5vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    /* transition: .5s; */
+}
+
+#page1 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#page1-content {
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.112); */
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#page1-content nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw 8vw;
+
+}
+
+#page1-content nav h3 {
+    font-size: 1.4vw;
+    font-weight: 500;
+    letter-spacing: .8px;
+}
+
+#page1-content nav h4 {
+    font-size: 1.4vw;
+    cursor: pointer;
+}
+
+#page1-content h1 {
+    font-size: 24vw;
+    font-weight: 400;
+    letter-spacing: 1px;
+    /* line-height: 24vw; */
+    margin-bottom: -1vw;
+}
+
+#page1-content h1 span {
+    font-family: Ubuntu;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    padding: 6vw 3vw;
+
+}
+
+.elm-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2vw;
+    border-bottom: 2px solid black;
+}
+
+.elm-top h4 {
+    font-size: 1.6vw;
+    padding-bottom: 5px;
+    font-weight: 400;
+}
+
+#elem {
+    margin-top: 1.5vw;
+    font-size: 4.1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#box {
+    width: 7vw;
+    height: 7vw;
+    background: red;
+
+}
