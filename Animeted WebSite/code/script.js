@@ -48,6 +48,7 @@ function onload() {
     page3Animation();
     page4Animation();
     headerAnimation();
+    Page5CursorAnimation();
 }
 
 function loadingAnimation() {
@@ -84,7 +85,6 @@ function loadingAnimation() {
         duration: 1,
     });
 }
-
 
 
 function headingAnimation() {
@@ -356,3 +356,41 @@ function page4Animation() {
     //     }
     // });
 }
+
+function Page5CursorAnimation() {
+    let page5Content = document.querySelector('#page5');
+    let cursor = document.querySelector('#page5-cursor');
+
+    page5Content.addEventListener('mousemove', (event) => {
+        gsap.to(cursor, {
+            x: event.x,
+            y: event.y
+        })
+    });
+    page5Content.addEventListener('mouseenter', (event) => {
+        gsap.to(cursor, {
+            scale: 1,
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+                trigger: " #page4",
+                scroller: "#main",
+                start: "top 0%",
+                end: "top -106%",
+                // markers: true,
+                scrub: 5
+            }
+        });
+    });
+    page5Content.addEventListener('mouseleave', (event) => {
+        gsap.to(cursor, {
+            scale: 0,
+            opacity: 0,
+            duration: 1,
+        });
+    });
+
+
+
+}
+
