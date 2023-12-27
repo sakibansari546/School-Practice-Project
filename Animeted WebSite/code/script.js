@@ -67,7 +67,7 @@ function loadingAnimation() {
                 loder.innerHTML = a + '%';
             }
 
-        }, 100);
+        }, 200);
     }
 
 
@@ -75,13 +75,13 @@ function loadingAnimation() {
     tl.to("#loader h2", {
         scale: 1.5,
         opacity: 1,
-        delay: 0.5,
+        delay: 2,
         duration: 1,
         onStart: loading()
     })
     tl.to("#loader", {
         top: "-100vh",
-        delay: 0.5,
+        delay: 1,
         duration: 1,
     });
 }
@@ -94,7 +94,7 @@ function headingAnimation() {
         scrollTrigger: {
             trigger: "#page1",
             scroller: "#main",
-            markers: true,
+            // markers: true,
             start: "top 0%",
             end: "top -100%",
             scrub: 2,
