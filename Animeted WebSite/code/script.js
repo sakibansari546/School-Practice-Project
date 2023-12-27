@@ -47,6 +47,7 @@ function onload() {
     cursorAnimation();
     page2Animation();
     page3Animation();
+    page4Animation();
     headerAnimation()
 }
 function headerAnimation() {
@@ -260,4 +261,57 @@ function page3Animation() {
             scrub: 5
         }
     });
+}
+
+
+function page4Animation() {
+
+    gsap.from("#page4 h1", {
+        y: 120,
+        stagger: 0.25,
+        duration: 1,
+        stagger: 0.2,
+        duration: 1,
+        scrollTrigger: {
+            trigger: " #page4",
+            scroller: "#main",
+            start: "top 40%",
+            end: "top 46%",
+            // markers: true,
+            scrub: 5
+        }
+    });
+
+    gsap.to("#page4 .elm-left h4", {
+        marginRight: 0,
+        opacity: 1,
+        scale: 1,
+        stagger: 0.25,
+        duration: 1,
+        stagger: 0.2,
+        duration: 1,
+        scrollTrigger: {
+            trigger: " #page4",
+            scroller: "#main",
+            start: "top 60%",
+            end: "top 46%",
+            // markers: true,
+            scrub: 5
+        }
+    });
+    // gsap.from("#page4 .elm-right h4", {
+    //     x: -120,
+    //     stagger: 0.25,
+    //     duration: 1,
+    //     stagger: 0.2,
+    //     duration: 1,
+    //     scrollTrigger: {
+    //         trigger: " #page4",
+    //         scroller: "#main",
+    //         start: "top 60%",
+    //         end: "top 46%",
+    //         // markers: true,
+    //         scrub: 5
+    //     }
+    // });
 }

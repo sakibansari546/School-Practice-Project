@@ -206,10 +206,10 @@ body {
 }
 
 #page1-content h1 {
-    font-size: 24vw;
+    font-size: 26vw;
     font-weight: 400;
     letter-spacing: 2px;
-    line-height: 27vw;
+    line-height: 22vw;
     font-family: rejouice;
     z-index: 10;
 }
@@ -222,7 +222,8 @@ body {
 }
 
 
-#page2 {
+#page2,
+#page4 {
     height: 100vh;
     width: 100%;
     padding: 6vw 3vw;
@@ -230,6 +231,11 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+#page4 h4 {
+    scale: 0;
+    opacity: 0;
 }
 
 .elm-top {
