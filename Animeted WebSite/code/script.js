@@ -38,18 +38,33 @@ function locoMotiveScroller() {
 }
 
 
-
-
-
 onload()
 
 function onload() {
+    headingAnimation()
     cursorAnimation();
     page2Animation();
     page3Animation();
     page4Animation();
     headerAnimation()
 }
+
+function headingAnimation() {
+    gsap.to('#page1 #page1-heading', {
+        transform: 'translateX(-125%)',
+        fontWeight: "100",
+        scrollTrigger: {
+            trigger: "#page1",
+            scroller: "#main",
+            markers: true,
+            start: "top 0%",
+            end: "top -100%",
+            scrub: 2,
+            pin: true
+        }
+    })
+}
+
 function headerAnimation() {
     let openBtn = document.querySelector('#open-menu-btn');
     let closeBtn = document.querySelector('#close-menu-btn');
@@ -57,7 +72,6 @@ function headerAnimation() {
     openBtn.addEventListener('click', () => {
         gsap.to('.nav-container', {
             y: { value: 0 },
-            x: 0,
             duration: 1,
             stagger: 0.5,
             opacity: 1,
@@ -96,7 +110,7 @@ function headerAnimation() {
     closeBtn.addEventListener('click', () => {
         gsap.to(menuContainer, {
             opacity: 0,
-            x: -500,
+            y: -500,
             duration: 1,
         });
 
@@ -125,11 +139,6 @@ function headerAnimation() {
     });
 }
 
-
-
-
-
-
 function cursorAnimation() {
     let page1Content = document.querySelector('#page1-content');
     let cursor = document.querySelector('#cursor');
@@ -143,14 +152,15 @@ function cursorAnimation() {
     page1Content.addEventListener('mouseenter', (event) => {
         gsap.to(cursor, {
             scale: 1,
-            opacity: 1
+            opacity: 1,
+            duration: 1,
         });
     });
     page1Content.addEventListener('mouseleave', (event) => {
         gsap.to(cursor, {
             scale: 0,
-            opacity: 0
-
+            opacity: 0,
+            duration: 1,
         });
     });
 
@@ -171,12 +181,6 @@ function cursorAnimation() {
         opacity: 0,
         stagger: 0.2
     });
-    // tl.from("#page1-content  h1", {
-    //     y: 200,
-    //     duration: 0.5,
-    //     // opacity: 0,
-    //     stagger: 0.2
-    // });
 
 }
 
