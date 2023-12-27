@@ -41,13 +41,51 @@ function locoMotiveScroller() {
 onload()
 
 function onload() {
-    headingAnimation()
+    loadingAnimation();
+    headingAnimation();
     cursorAnimation();
     page2Animation();
     page3Animation();
     page4Animation();
-    headerAnimation()
+    headerAnimation();
 }
+
+function loadingAnimation() {
+    let tl = gsap.timeline();
+    loading();
+    function loading() {
+        let loder = document.querySelector('#loader h2');
+        console.log(loder);
+        let a = 0;
+        setInterval(() => {
+            if (a < 100) {
+                a += Math.floor(Math.random() * 10) + 1;
+                loder.innerHTML = a + '%';
+            } else {
+                a = 100;
+                loder.innerHTML = a + '%';
+            }
+
+        }, 100);
+    }
+
+
+
+    tl.to("#loader h2", {
+        scale: 1.5,
+        opacity: 1,
+        delay: 0.5,
+        duration: 1,
+        onStart: loading()
+    })
+    tl.to("#loader", {
+        top: "-100vh",
+        delay: 0.5,
+        duration: 1,
+    });
+}
+
+
 
 function headingAnimation() {
     gsap.to('#page1 #page1-heading', {
