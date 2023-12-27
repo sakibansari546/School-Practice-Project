@@ -283,7 +283,6 @@ function page4Animation() {
     });
 
     gsap.to("#page4 .elm-left h4", {
-        marginRight: 0,
         opacity: 1,
         scale: 1,
         stagger: 0.25,
