@@ -49,7 +49,8 @@ function onload() {
     page4Animation();
     headerAnimation();
     Page5CursorAnimation();
-    page5LoadingAnimation()
+    page5LoadingAnimation();
+    sliderAnimation()
 }
 
 function loadingAnimation() {
@@ -106,6 +107,7 @@ function headingAnimation() {
 }
 
 function headerAnimation() {
+    let tl = gsap.timeline();
     let openBtn = document.querySelector('#open-menu-btn');
     let closeBtn = document.querySelector('#close-menu-btn');
     let menuContainer = document.querySelector('.nav-container')
@@ -122,14 +124,16 @@ function headerAnimation() {
         gsap.to('.left-nav video', {
             scale: 1,
             opacity: 1,
-            duration: 1
+            duration: 1,
+            delay: 0.5,
         });
         gsap.to('.left-nav .video-con span', {
             y: 20,
             scale: 1,
             opacity: 1,
-            duration: 1,
-            stagger: 0.3
+            duration: 0.5,
+            stagger: 0.3,
+            delay: 1,
         });
 
         gsap.to('.right-nav ul li', {
@@ -137,11 +141,12 @@ function headerAnimation() {
             opacity: 1,
             duration: 1,
             stagger: 0.1,
+            delay: 1.5,
         });
         gsap.to('.right-nav ul button', {
             scale: 1,
             opacity: 1,
-            delay: 0.5,
+            delay: 2,
             duration: 1,
             stagger: 0.1,
         });
@@ -160,7 +165,7 @@ function headerAnimation() {
         gsap.to('.left-nav video', {
             scale: 0,
             opacity: 0,
-            duration: 1
+            duration: 1,
         });
 
         gsap.to('.left-nav .video-con span', {
@@ -175,6 +180,13 @@ function headerAnimation() {
             opacity: 0,
             stagger: 0.1,
             duration: 1,
+        });
+        tl.to('.right-nav ul button', {
+            scale: 0,
+            opacity: 0,
+            delay: 0.5,
+            duration: 1,
+            stagger: 0.1,
         });
     });
 }
@@ -464,4 +476,24 @@ function page5LoadingAnimation() {
             onEnter: svgSpin,
         },
     })
+}
+
+
+
+
+function sliderAnimation() {
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        freeMode: true,
+        loop: true, // Enable infinite loop
+        autoplay: {
+            delay: 2000, // Set the delay between slides (in milliseconds)
+            // disableOnInteraction: false, // Allow manual sliding to stop autoplay
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
 }
