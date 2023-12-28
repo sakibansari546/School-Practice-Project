@@ -49,6 +49,7 @@ function onload() {
     page4Animation();
     headerAnimation();
     Page5CursorAnimation();
+    page5LoadingAnimation()
 }
 
 function loadingAnimation() {
@@ -395,3 +396,72 @@ function Page5CursorAnimation() {
 
 }
 
+function page5LoadingAnimation() {
+    let tl = gsap.timeline();
+    let loader = document.querySelector('#page5 h2');
+
+    function loading() {
+        var a = 0;
+
+        let intervalId = setInterval(() => {
+            if (a < 100) {
+                a += Math.floor(Math.random() * 10) + 1;
+                loader.innerHTML = a + '%';
+            } else {
+                a = 100;
+                loader.innerHTML = a + '%';
+                clearInterval(intervalId);
+            }
+        }, 200);
+    }
+
+    gsap.to("#page5 h2", {
+        scale: 1.5,
+        delay: 5,
+        opacity: 1,
+        duration: 1,
+        onStart: loading,
+        scrollTrigger: {
+            trigger: "#page5",
+            scroller: "#main",
+            start: "top 40%",
+            end: "top 60%",
+            scrub: 5,
+            delay: 1,
+            onEnter: loading,
+            onLeave: () => {
+                a = 0;
+                loader.innerHTML = a + '%';
+            },
+        }
+    });
+
+
+
+    var spin = document.querySelector('#page5 svg');
+    function svgSpin() {
+        if (!spin.classList.contains('active')) {
+            spin.classList.add('active');
+        }
+    }
+    function svgSpinEnd() {
+        if (spin.classList.contains('active')) {
+            spin.classList.remove('active');
+        }
+    }
+
+    gsap.to("#page5 svg", {
+        duration: 1,
+        delay: 1,
+        onStart: svgSpin,
+        scrollTrigger: {
+            trigger: "#page5",
+            scroller: "#main",
+            start: "top 40%",
+            end: "top 60%",
+            scrub: 5,
+            delay: 1,
+            onEnter: svgSpin,
+        },
+    })
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .spin {
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg class="spin" width="100" height="100">
+        <!-- Outer circle -->
+        <circle cx="50" cy="50" r="40" stroke="#3498db" stroke-width="3" fill="transparent" />
+
+        <!-- Inner dot centered within the outer circle -->
+        <circle cx="50" cy="50" r="3" fill="#3498db" />
+    </svg>
+</body>
+
+</html>
