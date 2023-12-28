@@ -74,15 +74,16 @@ function loadingAnimation() {
 
     tl.to("#loader h2", {
         scale: 1.5,
+        delay: 0.5,
         opacity: 1,
-        delay: 2,
         duration: 1,
         onStart: loading()
     })
     tl.to("#loader", {
         top: "-100vh",
-        delay: 1,
+        delay: 2,
         duration: 1,
+        onStart: loading()
     });
 }
 
