@@ -510,7 +510,7 @@ function footerAnimation() {
             scroller: "#main",
             start: "top -30%",
             end: "top 60%",
-            markers: true,
+            // markers: true,
             scrub: 5
         }
     });
@@ -527,7 +527,7 @@ function footerAnimation() {
             scroller: "#main",
             start: "top 10%",
             end: "top 60%",
-            markers: true,
+            // markers: true,
             scrub: 5
         }
     });
@@ -543,7 +543,7 @@ function footerAnimation() {
             scroller: "#main",
             start: "top 10%",
             end: "top 60%",
-            markers: true,
+            // markers: true,
             scrub: 5
         }
     });
@@ -559,7 +559,7 @@ function footerAnimation() {
             scroller: "#main",
             start: "top 10%",
             end: "top 60%",
-            markers: true,
+            // markers: true,
             scrub: 5
         }
     });
