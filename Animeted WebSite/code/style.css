@@ -113,27 +113,33 @@ body {
 }
 
 .nav-container .right-nav ul button {
+    display: inline-block;
     background: transparent;
-    color: black;
-    padding: 12px 18px;
-    border: 2px solid black;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-top: 1.5vw;
+    font-size: 1.2vw;
     outline: 0;
-    scale: 0;
-    opacity: 0;
+    cursor: pointer;
     position: relative;
+    transition: 0.5s;
 }
 
 .nav-container .right-nav ul button:hover {
+    background-color: black;
     color: white;
 }
 
 .nav-container .right-nav ul button:hover::before {
     width: 100%;
     color: white;
+    opacity: 1;
 }
 
 .nav-container .right-nav ul button::before {
-    content: "";
+    content: "Take a seat";
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,6 +151,7 @@ body {
     height: 100%;
     top: 0px;
     left: 0;
+    opacity: 0;
 }
 
 #page1 {
