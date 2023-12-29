@@ -50,7 +50,8 @@ function onload() {
     headerAnimation();
     Page5CursorAnimation();
     page5LoadingAnimation();
-    sliderAnimation()
+    sliderAnimation();
+    footerAnimation();
 }
 
 function loadingAnimation() {
@@ -92,7 +93,7 @@ function loadingAnimation() {
 
 function headingAnimation() {
     gsap.to('#page1 #page1-heading', {
-        transform: 'translateX(-125%)',
+        transform: 'translateX(-95%)',
         fontWeight: "100",
         scrollTrigger: {
             trigger: "#page1",
@@ -479,8 +480,6 @@ function page5LoadingAnimation() {
 }
 
 
-
-
 function sliderAnimation() {
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 4,
@@ -495,5 +494,73 @@ function sliderAnimation() {
             el: ".swiper-pagination",
             clickable: true,
         },
+    });
+}
+
+function footerAnimation() {
+    gsap.from(".brand h1 span", {
+        y: -150,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        duration: 2,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#footer",
+            scroller: "#main",
+            start: "top -30%",
+            end: "top 60%",
+            markers: true,
+            scrub: 5
+        }
+    });
+
+    gsap.from(".footer-top-left h3,.footer-top-right li,.footer-socail-media li", {
+        y: -150,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        duration: 2,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#footer",
+            scroller: "#main",
+            start: "top 10%",
+            end: "top 60%",
+            markers: true,
+            scrub: 5
+        }
+    });
+    gsap.from(".footer-bottom-left p", {
+        x: -150,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        duration: 1,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#footer",
+            scroller: "#main",
+            start: "top 10%",
+            end: "top 60%",
+            markers: true,
+            scrub: 5
+        }
+    });
+    gsap.from(".footer-bottom-right p", {
+        x: 150,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        duration: 1,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#footer",
+            scroller: "#main",
+            start: "top 10%",
+            end: "top 60%",
+            markers: true,
+            scrub: 5
+        }
     });
 }
