@@ -156,7 +156,7 @@ function headerAnimation() {
     closeBtn.addEventListener('click', () => {
         gsap.to(menuContainer, {
             opacity: 0,
-            y: -500,
+            y: -600,
             duration: 1,
         });
 
