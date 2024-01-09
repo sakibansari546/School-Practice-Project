@@ -88,11 +88,19 @@ function loadingAnimation() {
         duration: 1,
         onStart: loading()
     });
+    tl.from('.about-heading h1', {
+        y: 320,
+        delay: 0,
+        duration: 1,
+        stagger: 0.5,
+    })
+
 }
 
 
 function headingAnimation() {
-    gsap.to('#page1 #page1-heading', {
+    let tl = gsap.timeline();
+    tl.to('#page1 #page1-heading', {
         transform: 'translateX(-95%)',
         fontWeight: "100",
         scrollTrigger: {
@@ -156,7 +164,7 @@ function headerAnimation() {
     closeBtn.addEventListener('click', () => {
         gsap.to(menuContainer, {
             opacity: 0,
-            y: -600,
+            y: -500,
             duration: 1,
         });
 
@@ -563,4 +571,26 @@ function footerAnimation() {
             scrub: 5
         }
     });
+}
+
+aboutSection()
+
+function aboutSection() {
+    gsap.from(".content div", {
+        y: -150,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        duration: 2,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#page3",
+            scroller: "#main",
+            start: "top -30%",
+            end: "top 60%",
+            // markers: true,
+            scrub: 5
+        }
+    });
+
 }

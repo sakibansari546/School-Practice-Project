@@ -9,6 +9,69 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="/Animeted WebSite/code/style.css">
+
+
+    <style>
+        .about-heading {
+            text-align: center;
+            font-size: 3.5vw;
+            overflow: hidden;
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            letter-spacing: 3px;
+            transform: translateX(-50%);
+        }
+
+        .about-heading h1 {
+            overflow: hidden;
+        }
+
+        #page1 {
+            background: black;
+            color: white;
+            width: 100%;
+            height: 90vh;
+        }
+
+        #page3 {
+            padding: 2vw 4vw;
+            background: black;
+            color: white;
+        }
+
+        #page3 .content-container {
+            padding: 1.5vw 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+            width: 100%;
+        }
+
+        #page3 .content-container .content {
+            flex-basis: 30%;
+            font-size: 1.7vw !important;
+            text-align: left !important;
+        }
+
+        .content-container .content .topic-heading {
+            font-weight: 100;
+            font-family: heading1;
+        }
+
+        .topic-no {
+            font-size: 1.5vw;
+            font-family: heading1;
+        }
+
+        .topic-heading {
+            padding-top: 1vw;
+            padding-bottom: 2vw;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,8 +93,10 @@
                 <div class="right-nav">
                     <h4 id="close-menu-btn">Close</h4>
                     <ul>
-                        <li>Home</li>
-                        <a href="/Animeted WebSite/other files/about/index.html">
+                        <a href="/Animeted WebSite/code/index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="#">
                             <li>Work</li>
                         </a>
                         <li>Services & Models</li>
@@ -47,15 +112,17 @@
             <div id="cursor">
                 <h5>Play!</h5>
             </div>
-            <video src="/Home Page1/image/RJ-2.0-Video background .mp4" autoplay muted loop></video>
+            <div class="about-heading">
+                <h1>About</h1>
+                <h1>of</h1>
+                <h1>Digital World</h1>
+            </div>
             <div id="page1-content">
                 <nav>
                     <h3>The Venture Agency</h3>
                     <h4 id="open-menu-btn">Menu</h4>
                     <!-- <h4 id="close-menu-btn">Close</h4> -->
                 </nav>
-                <h1 id="page1-heading">digital world</h1>
-                <!-- <span>r</span><span>e</span><span>j</span><span>o</span><span>u</span><span>i</span><span>c</span><span>e</span> -->
             </div>
         </div>
 
@@ -79,106 +146,66 @@
             </div>
         </div>
 
-
         <div id="page3">
-            <div id="page3-top">
-                <h4>Agency & Venture <span>Models</span></h4>
-                <h2>Explore Our World</h2>
-                <h2>& engament models←</h2>
-            </div>
-            <div id="page3-elements">
-                <div class="box">
-                    <video src="/Home Page1/image/Website-homepage-Work-01_1.mp4" autoplay loop muted></video>
-                    <img src="/Home Page1/image/box img 1.avif" alt="">
-                </div>
-                <div class="box">
-                    <video src="/Home Page1/image/Website-homepage-Work-02_1.mp4" autoplay loop muted></video>
-                    <img src="/Home Page1/image/box img 2.avif" alt="">
-                </div>
-                <div class="box">
-                    <video src="/Home Page1/image/Website-homepage-Work-03_1.mp4" autoplay loop muted></video>
-                    <img src="/Home Page1/image/box img 3.avif" alt="">
-                </div>
-            </div>
-        </div>
+            <div class="about-topic-container">
+                <div class="content-container">
+                    <div class="content">
+                        <p class="topic-no">(1)</p>
+                        <p class="topic-heading">Digital Technologies:</p>
+                        <p class="topic-content">
+
+                            Digital technologies refer to the use of electronic devices and systems that operate based
+                            on binary code, where data is represented in the form of discrete elements (bits). These
+                            technologies have revolutionized the way information is processed, stored, and transmitted.
+
+                        </p>
+                    </div>
+                    <div class="content">
+                        <div class="topic-no">(2)</div>
+                        <div class="topic-heading">Internet and Connectivity: </div>
+                        <div class="topic-content">
+                            The internet connects us globally, providing instant communication, access to vast
+                            information, and online resources. Technologies like broadband and wireless enhance speed,
+                            making it a crucial tool in shaping our digital interactions.
 
 
-        <div id="page4">
-            <div class="elm-top">
-                <div class="elm-left">
-                    <h4>Feature of Digital world.</h4>
-                    <h4>Two engagement models.</h4>
-                </div>
-                <div class="elm-right">
-                </div>
-            </div>
-            <div id="elem">
-                <h1 id="page2Span">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The digital world is characterized by
-                    <h1>seamless interconnectivity, where information is </h1>
-                    <h1>represented numerically using binary code. It </h1>
-                    <h1>encompasses a diverse range of devices, operates</h1>
-                    <h1> within interconnected networks, and features </h1>
-                    <h1>automation, artificial intelligence, and global</h1>
-                    <h1> accessibility.</h1>
-            </div>
-        </div>
-
-        <div id="page5">
-            <div id="page5-cursor">
-                <p>Take it!</p>
-            </div>
-            <div class="page5-video">
-                <video src="/Home Page1/image/RJ-BALL-BLUE-ORANGE-scaled.webm" autoplay loop muted></video>
-                <svg class="abs tl:0 fit transform rotate:-90deg" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="49" stroke="#fff" stroke-width="0.25" fill="none"
-                        class="o:0.3 dasharray:302 dashoffset:604 (.in-view):dashoffset:400 (.in-view):tween:all,2.8s,easeOutSlow ">
-                    </circle>
-                    <circle cx="50" cy="50" r="49" stroke="#fff" stroke-width="0.25" fill="none"
-                        class="dasharray:302 dashoffset:302 (.in-view):dashoffset:100 (.in-view):tween:all,2.8s,easeOutSlow ">
-                    </circle>
-                    <svg class="abs tl:0 fit transform rotate:0 (.in-view):rotate:237deg (.in-view):tween:all,2.8s,easeOutSlow "
-                        viewBox="0 0 100 100">
-                        <circle cx="50" cy="1" r="1" fill="#fff"></circle>
-                    </svg>
-                </svg>
-                <h2>0%</h2>
-            </div>
-        </div>
-
-        <div id="page6">
-            <div id="page6-top">
-                <h1>Get in touch.</h1>
-            </div>
-            <div id="swiper-div">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="https://plus.unsplash.com/premium_photo-1683120968693-9af51578770e?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="">
                         </div>
-                        <div class="swiper-slide">
-                            <img src="https://img.freepik.com/premium-photo/social-media-icons-logos-mobile-phone-screen-background-social-marketing-networking_125322-408.jpg"
-                                alt="">
-                        </div>
-                        <div class=" swiper-slide">
-                            <img src="https://images.unsplash.com/photo-1500627965408-b5f2c8793f17?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGRhcmslMjBkaWdpdGFsJTIwYXJ0fGVufDB8fDB8fHww"
-                                alt="">
-                        </div>
-                        <div class="swiper-slide">
+                    </div>
+                    <div class="content">
+                        <div class="topic-no">(3)</div>
+                        <div class="topic-heading">Social Media:</div>
+                        <div class="topic-content">
+                            Social media enables global connectivity, allowing individuals to share, communicate, and
+                            engage online. Platforms like Facebook, Twitter, and Instagram play a pivotal role in
+                            shaping modern communication and fostering digital communities.
 
-                            <img src="https://images.unsplash.com/photo-1658248165127-f880b5a74e98?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRhcmslMjBkaWdpdGFsJTIwYXJ0fGVufDB8fDB8fHww"
-                                alt="">
                         </div>
-                        <div class="swiper-slide">
+                    </div>
+                    <div class="content">
+                        <div class="topic-no">(4)</div>
+                        <div class="topic-heading">Artificial Intelligence (AI) and Automation:</div>
+                        <div class="topic-content">
+                            AI and automation revolutionize tasks by enabling machines to learn and perform functions.
+                            From chatbots to self-driving cars, these technologies enhance efficiency, reshape
+                            industries, and influence the evolving landscape of the digital world.
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="topic-no">(5)</div>
+                        <div class="topic-heading">Virtual Reality (VR) and Augmented Reality (AR): </div>
+                        <div class="topic-content">
+                            Virtual Reality (VR) and Augmented Reality (AR) immerse users in digital experiences. VR
+                            creates a simulated environment, while AR overlays digital elements onto the real world.
+                            These technologies transform entertainment, education, and various industries, enhancing the
+                            way we perceive and interact with the digital realm.
 
-                            <img src="https://images.unsplash.com/photo-1487088678257-3a541e6e3922?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGRpZ2l0YWwlMjBhcnR8ZW58MHx8MHx8fDA%3D"
-                                alt="">
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <footer id="footer">
             <div class="footer-heading">
@@ -240,6 +267,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/Animeted WebSite/code/script.js"></script>
+
 </body>
 
 </html>
