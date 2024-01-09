@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | REJOUSE®</title>
+    <title>Feature | REJOUSE®</title>
     <link rel="shortcut icon" href="/Animeted WebSite/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="/Animeted WebSite/code/style.css">
 
@@ -25,6 +28,7 @@
 
         .about-heading h1 {
             overflow: hidden;
+            font-family: heading1;
         }
 
         #page1 {
@@ -71,6 +75,135 @@
             padding-bottom: 2vw;
             text-decoration: underline;
         }
+
+
+        #page3 {
+            /* height: 70vh !important; */
+            width: 100%;
+        }
+
+        .feature-container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .feature-wraper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+        }
+
+        .feature-wraper .main-img {
+            width: 50%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .feature-wraper .main-img video {
+            width: 50vw;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .feature-wraper .secondaary-img {
+            width: 50%;
+        }
+
+        #portfolio {
+            width: 100%;
+            height: 100%;
+            padding: 50px 0;
+        }
+
+        .work-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            /* margin-top: 50px; */
+        }
+
+        .work {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: trnsform 0.7s;
+        }
+
+        .work:hover img {
+            transform: scale(1.1);
+            transition: transform 0.7s;
+        }
+
+        .work i {
+            color: black;
+        }
+
+        .work:hover .layer {
+            height: 100%;
+            transition: height 0.5s;
+
+        }
+
+        .layer {
+            width: 100%;
+            height: 00%;
+            font-size: 15px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 40px;
+            text-align: center;
+            transition: height 0.5s;
+        }
+
+        .layer h3 {
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .layer a {
+            margin-top: 20px;
+            color: #FF5F38;
+            font-size: 20px;
+            line-height: 60px;
+            background-color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .btn {
+            display: block;
+            margin: 50px auto;
+            width: fit-content;
+            border: 1px solid #FF5F38;
+            padding: 14px 50px;
+            color: #FF5F38;
+            transition: all 0.5s;
+
+        }
+
+        .btn:hover {
+            background-color: #FF5F38;
+            color: white;
+            transition: all 0.5s;
+        }
     </style>
 </head>
 
@@ -99,9 +232,10 @@
                         <a href="/Animeted WebSite/other files/about/index.html">
                             <li>About</li>
                         </a>
-                        <a href="/Animeted WebSite/other files/Feature/index.html">
+                        <a class="active" href="/Animeted WebSite/other files/Feature/index.html">
                             <li>Feature</li>
                         </a>
+                        <li>Service</li>
                         <li>Contact</li>
                         <button>Take a Seat</button>
                     </ul>
@@ -150,59 +284,55 @@
         </div>
 
         <div id="page3">
-            <div class="about-topic-container">
-                <div class="content-container">
-                    <div class="content">
-                        <p class="topic-no">(1)</p>
-                        <p class="topic-heading">Digital Technologies:</p>
-                        <p class="topic-content">
-
-                            Digital technologies refer to the use of electronic devices and systems that operate based
-                            on binary code, where data is represented in the form of discrete elements (bits). These
-                            technologies have revolutionized the way information is processed, stored, and transmitted.
-
-                        </p>
+            <div class="feature-container">
+                <div class="feature-wraper">
+                    <div class="main-img">
+                        <video src="/Home Page1/image/Website-homepage-Work-01_1.mp4" loop autoplay muted></video>
                     </div>
-                    <div class="content">
-                        <div class="topic-no">(2)</div>
-                        <div class="topic-heading">Internet and Connectivity: </div>
-                        <div class="topic-content">
-                            The internet connects us globally, providing instant communication, access to vast
-                            information, and online resources. Technologies like broadband and wireless enhance speed,
-                            making it a crucial tool in shaping our digital interactions.
-
-
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div class="topic-no">(3)</div>
-                        <div class="topic-heading">Social Media:</div>
-                        <div class="topic-content">
-                            Social media enables global connectivity, allowing individuals to share, communicate, and
-                            engage online. Platforms like Facebook, Twitter, and Instagram play a pivotal role in
-                            shaping modern communication and fostering digital communities.
-
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div class="topic-no">(4)</div>
-                        <div class="topic-heading">Artificial Intelligence (AI) and Automation:</div>
-                        <div class="topic-content">
-                            AI and automation revolutionize tasks by enabling machines to learn and perform functions.
-                            From chatbots to self-driving cars, these technologies enhance efficiency, reshape
-                            industries, and influence the evolving landscape of the digital world.
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div class="topic-no">(5)</div>
-                        <div class="topic-heading">Virtual Reality (VR) and Augmented Reality (AR): </div>
-                        <div class="topic-content">
-                            Virtual Reality (VR) and Augmented Reality (AR) immerse users in digital experiences. VR
-                            creates a simulated environment, while AR overlays digital elements onto the real world.
-                            These technologies transform entertainment, education, and various industries, enhancing the
-                            way we perceive and interact with the digital realm.
-
-
+                    <div class="secondary-img">
+                        <div id="portfolio">
+                            <div class="faeture-container">
+                                <div class="work-list">
+                                    <div class="work">
+                                        <img src="/Home Page1/image/box img 1.avif" alt="work">
+                                        <div class="layer">
+                                            <h3>Social Media App</h3>
+                                            <p>The app connect you to the talented people around the world. Download it
+                                                from play store</p>
+                                            <a href="#"><i class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="work">
+                                        <img src="https://images.prismic.io/rejouice/460fab4d-6e2c-4267-b361-2f232c04af19_ListAcross.jpg?auto=compress,format"
+                                            alt="work">
+                                        <div class="layer">
+                                            <h3>Music App</h3>
+                                            <p>The app connect you to the talented people around the world. Download it
+                                                from play store</p>
+                                            <a href="#"><i class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="work">
+                                        <img src="https://images.prismic.io/rejouice/41231e86-1f8b-4002-852d-246131b1bdca_Tenzr.jpg?auto=compress,format"
+                                            alt="work">
+                                        <div class="layer">
+                                            <h3>Music App</h3>
+                                            <p>The app connect you to the talented people around the world. Download it
+                                                from play store</p>
+                                            <a href="#"><i class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="work">
+                                        <img src="/Home Page1/image/box img 2.avif" alt="work">
+                                        <div class="layer">
+                                            <h3>Online Shoping App</h3>
+                                            <p>The app connect you to the talented people around the world. Download it
+                                                from play store</p>
+                                            <a href="#"><i class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

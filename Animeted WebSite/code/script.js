@@ -90,9 +90,11 @@ function loadingAnimation() {
     });
     tl.from('.about-heading h1', {
         y: 320,
+        opacity: 0,
+        scale: 1,
         delay: 0,
         duration: 1,
-        stagger: 0.5,
+        stagger: 0.1,
     })
 
 }
@@ -149,13 +151,13 @@ function headerAnimation() {
             scale: 1,
             opacity: 1,
             duration: 1,
-            stagger: 0.1,
+            stagger: 0.01,
             delay: 1.5,
         });
         gsap.to('.right-nav ul button', {
             scale: 1,
             opacity: 1,
-            delay: 2,
+            delay: 1,
             duration: 1,
             stagger: 0.1,
         });
@@ -164,7 +166,7 @@ function headerAnimation() {
     closeBtn.addEventListener('click', () => {
         gsap.to(menuContainer, {
             opacity: 0,
-            y: -500,
+            y: -800,
             duration: 1,
         });
 
