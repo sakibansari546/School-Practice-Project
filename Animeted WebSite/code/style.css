@@ -27,7 +27,7 @@ body {
 #loader {
     height: 100vh;
     width: 100%;
-    background-color: #000000;
+    background-color: #FF5F38;
     color: white;
     display: flex;
     align-items: center;
@@ -115,7 +115,6 @@ body {
 
 .nav-container .right-nav ul a.active {
     text-decoration: underline;
-
 }
 
 .nav-container .right-nav ul a:hover {

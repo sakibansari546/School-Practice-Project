@@ -4,17 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | REJOUSE®</title>
+    <title>About | REJOUSE®</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="/Animeted WebSite/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="/Animeted WebSite/code/style.css">
 
 
+
     <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
         .about-heading {
             text-align: center;
-            font-size: 3.5vw;
             overflow: hidden;
             position: absolute;
             bottom: 20%;
@@ -24,6 +31,7 @@
         }
 
         .about-heading h1 {
+            font-size: 5.5vw;
             overflow: hidden;
             font-family: heading1;
         }
@@ -37,7 +45,7 @@
 
         #page3 {
             padding: 2vw 4vw;
-            background: black;
+            /* background: black; */
             color: white;
         }
 
@@ -71,6 +79,145 @@
             padding-top: 1vw;
             padding-bottom: 2vw;
             text-decoration: underline;
+        }
+
+        .card-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .about-topic-container h1 {
+            color: balck;
+        }
+
+
+        figure.snip1200 {
+            font-family: 'Raleway', Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+            /* max-width: 310px;
+            max-height: 310px; */
+            width: 400px;
+            height: 450px;
+            background: #ff6038cc;
+            color: #ffffff;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+            font-size: 16px;
+        }
+
+        figure.snip1200 * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.45s ease-in-out;
+            transition: all 0.45s ease-in-out;
+        }
+
+        figure.snip1200 img {
+            width: 100%;
+            position: relative;
+            opacity: 0.9;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        figure.snip1200 figcaption {
+            position: absolute;
+            top: 45%;
+            left: 7%;
+            right: 7%;
+            bottom: 45%;
+            border: 1px solid white;
+            border-width: 1px 1px 0;
+        }
+
+        figure.snip1200 .heading {
+            overflow: hidden;
+            -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        figure.snip1200 h2 {
+            display: table;
+            margin: 0 auto;
+            padding: 0 10px;
+            position: relative;
+            text-align: center;
+            width: auto;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        figure.snip1200 h2 span {
+            font-weight: 800;
+        }
+
+        figure.snip1200 h2:before,
+        figure.snip1200 h2:after {
+            position: absolute;
+            display: block;
+            width: 1000%;
+            height: 1px;
+            content: '';
+            background: white;
+            top: 50%;
+        }
+
+        figure.snip1200 h2:before {
+            left: -1000%;
+        }
+
+        figure.snip1200 h2:after {
+            right: -1000%;
+        }
+
+        figure.snip1200 p {
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            position: absolute;
+            width: 100%;
+            padding: 0 20px;
+            margin: 0;
+            opacity: 0;
+            line-height: 1.6em;
+            font-size: 0.9em;
+        }
+
+        figure.snip1200 a {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            z-index: 1;
+        }
+
+        figure.snip1200:hover img,
+        figure.snip1200.hover img {
+            opacity: 0.25;
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        figure.snip1200:hover figcaption,
+        figure.snip1200.hover figcaption {
+            top: 7%;
+            bottom: 7%;
+        }
+
+        figure.snip1200:hover p,
+        figure.snip1200.hover p {
+            opacity: 1;
+            -webkit-transition-delay: 0.35s;
+            transition-delay: 0.35s;
         }
     </style>
 </head>
@@ -151,60 +298,78 @@
 
         <div id="page3">
             <div class="about-topic-container">
-                <div class="content-container">
-                    <div class="content">
-                        <p class="topic-no">(1)</p>
-                        <p class="topic-heading">Digital Technologies:</p>
-                        <p class="topic-content">
-
-                            Digital technologies refer to the use of electronic devices and systems that operate based
-                            on binary code, where data is represented in the form of discrete elements (bits). These
-                            technologies have revolutionized the way information is processed, stored, and transmitted.
-
-                        </p>
-                    </div>
-                    <div class="content">
-                        <div class="topic-no">(2)</div>
-                        <div class="topic-heading">Internet and Connectivity: </div>
-                        <div class="topic-content">
-                            The internet connects us globally, providing instant communication, access to vast
-                            information, and online resources. Technologies like broadband and wireless enhance speed,
-                            making it a crucial tool in shaping our digital interactions.
-
-
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div class="topic-no">(3)</div>
-                        <div class="topic-heading">Social Media:</div>
-                        <div class="topic-content">
-                            Social media enables global connectivity, allowing individuals to share, communicate, and
-                            engage online. Platforms like Facebook, Twitter, and Instagram play a pivotal role in
-                            shaping modern communication and fostering digital communities.
-
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div class="topic-no">(4)</div>
-                        <div class="topic-heading">Artificial Intelligence (AI) and Automation:</div>
-                        <div class="topic-content">
-                            AI and automation revolutionize tasks by enabling machines to learn and perform functions.
-                            From chatbots to self-driving cars, these technologies enhance efficiency, reshape
-                            industries, and influence the evolving landscape of the digital world.
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div class="topic-no">(5)</div>
-                        <div class="topic-heading">Virtual Reality (VR) and Augmented Reality (AR): </div>
-                        <div class="topic-content">
-                            Virtual Reality (VR) and Augmented Reality (AR) immerse users in digital experiences. VR
-                            creates a simulated environment, while AR overlays digital elements onto the real world.
-                            These technologies transform entertainment, education, and various industries, enhancing the
-                            way we perceive and interact with the digital realm.
-
-
-                        </div>
-                    </div>
+                <h1>Digital Technologies</h1>
+                <div class="card-container">
+                    <figure class="snip1200">
+                        <img src="https://blog.hubspot.com/hs-fs/hubfs/ecommerce%20marketing.jpg?width=595&height=400&name=ecommerce%20marketing.jpg"
+                            alt="sq-sample27" />
+                        <figcaption>
+                            <p>I say, if your knees aren't green by the end of the day, you ought to seriously
+                                re-examine your life.</p>
+                            <div class="heading">
+                                <h2>E<span> commerce</span></h2>
+                            </div>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+                    <figure class="snip1200 ">
+                        <img src="https://images.tech.co/wp-content/uploads/2022/10/14123538/socialmedia-1-1024x512.jpg"
+                            alt="sq-sample31" />
+                        <figcaption>
+                            <p>The inside of my head was exploding with fireworks. Fortunately, my last thought turned
+                                out the lights when it left.</p>
+                            <div class="heading">
+                                <h2>Social<span> Media</span></h2>
+                            </div>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+                    <figure class="snip1200">
+                        <img src="https://s22908.pcdn.co/wp-content/uploads/2023/05/browsers-vs-search-engines.jpg" />
+                        <figcaption>
+                            <p>That's the difference between me and the rest of the world! Happiness isn't good enough
+                                for me! I demand euphoria! </p>
+                            <div class="heading">
+                                <h2>Search <span> Engine</span></h2>
+                            </div>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+                    <figure class="snip1200">
+                        <img src="https://miro.medium.com/v2/resize:fit:700/0*6k5UvAUwNK2qVqnM.png" alt="sq-sample32" />
+                        <figcaption>
+                            <p>That's the difference between me and the rest of the world! Happiness isn't good enough
+                                for me! I demand euphoria! </p>
+                            <div class="heading">
+                                <h2>Digital <span> Marketing</span></h2>
+                            </div>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+                    <figure class="snip1200">
+                        <img src="https://images.cnbctv18.com/wp-content/uploads/2021/02/shutterstock_1784061893.jpg?impolicy=website&width=345&height=264"
+                            alt="sq-sample32" />
+                        <figcaption>
+                            <p>That's the difference between me and the rest of the world! Happiness isn't good enough
+                                for me! I demand euphoria! </p>
+                            <div class="heading">
+                                <h2>Digital <span> Currencies</span></h2>
+                            </div>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+                    <figure class="snip1200">
+                        <img src="https://cdn.shopify.com/s/files/1/0564/0749/0660/files/tof_sensor_TOF_Time_of_Flight_sensors_have_become_increasingly__67b8a56a-5258-4cd9-863e-691de464a2ec_480x480.png?v=1683255536"
+                            alt="sq-sample32" />
+                        <figcaption>
+                            <p>That's the difference between me and the rest of the world! Happiness isn't good enough
+                                for me! I demand euphoria! </p>
+                            <div class="heading">
+                                <h2>Virtual and Augmented Reality <span> Applications</span></h2>
+                            </div>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -273,6 +438,15 @@
 
 
     <script>
+
+        /* Demo purposes only */
+        // $(".hover").mouseleave(
+        //     function () {
+        //         $(this).removeClass("hover");
+        //     }
+        // );
+
+
         footerAnimation()
         function footerAnimation() {
             gsap.from(".brand h1 span", {
