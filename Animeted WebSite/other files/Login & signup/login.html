@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feature | REJOUSE®</title>
+    <title>LogIn | REJOUSE®</title>
     <link rel="shortcut icon" href="/Animeted WebSite/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Font Awesome CSS -->
@@ -353,9 +353,7 @@
                                 <p>Don't have an account? <a href="">LigIn</a></p>
                             </div>
 
-                            <div id="login-close-button" class="close-button">
-                                <img src="https://img.icons8.com/?size=256&id=71200&format=png" alt="">
-                            </div>
+
                         </form>
                     </div>
 
@@ -428,7 +426,7 @@
             if (LoginEmailIsValid) {
                 LoginTickEmailIcon.style.display = 'block';
                 LoginEmailIcon.style.display = 'none'
-                LoginTickEmailIcon.style.color = '#7114ff'
+                LoginTickEmailIcon.style.color = 'green'
                 LoginEmailIcon.style.animation = "";
             } else {
                 LoginTickEmailIcon.style.display = 'none';
@@ -450,7 +448,7 @@
 
             if (loginPasswordIsValid) {
                 loginPasswordIcon.style.animation = "";
-                loginPasswordIcon.style.color = "#7114ff";
+                loginPasswordIcon.style.color = "green";
             } else {
                 loginPasswordIcon.style.animation = "horizontal-shaking .2s 5 ";
                 loginPasswordIcon.style.color = "red";
@@ -475,8 +473,8 @@
 
                 loginContainer.style.display = 'none';
                 loginErrorIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
-                loginErrorIcon.style.color = 'Green'
-                LoginErrorIconContainer.style.borderColor = 'green';
+                loginErrorIcon.style.color = Green'
+                LoginErrorIconContainer.style.borderColor = green';
                 validateInputError.innerHTML = 'Login successfully';
                 loginError.innerHTML = 'Go to your profile page';
                 errorIconContainer.style.borderColor = 'rgb(0, 195, 0)'
