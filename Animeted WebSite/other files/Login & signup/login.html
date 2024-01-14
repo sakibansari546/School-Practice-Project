@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature | REJOUSE®</title>
+    <link rel="shortcut icon" href="/Animeted WebSite/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="/Animeted WebSite/code/style.css">
+
+
+    <style>
+        .main-contaier {
+            height: 80vh;
+        }
+
+        #registeration-form .input-container {
+            margin-bottom: 5px;
+        }
+
+        .main-contaier .register-container h2 {
+            margin: 15px 0;
+        }
+
+        .register-container .register-div p {
+            margin-top: 10px;
+        }
+
+
+
+
+
+        #forms {
+            width: 100%;
+        }
+
+        .main-contaier h2 {
+            margin: 40px 0;
+            font-size: 35px;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .main-contaier.active {
+            display: flex;
+        }
+
+        .main-contaier {
+            /* width: 100vw; */
+            height: 100dvh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0000002c;
+            backdrop-filter: blur(2px);
+            position: absolute;
+            top: 0px;
+        }
+
+        .login-container {
+            min-width: 350px;
+            width: 400px;
+            /* height: 500px; */
+            background: #eaeaea2b;
+            backdrop-filter: blur(15px);
+            padding: 20px 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+        }
+
+        .input-container {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .icon.active {
+            animation: horizontal-shaking .2s infinite;
+        }
+
+        .input-container input {
+            width: calc(100% - 10px);
+            padding: 10px 0px;
+            margin-bottom: 10px;
+            background: transparent;
+            border: none;
+            outline: 0;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.757);
+            /* border-radius: 4px; */
+        }
+
+        .icon {
+            font-size: 18px;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .main-contaier button {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            color: black;
+            border: none;
+            margin-bottom: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.785);
+            cursor: pointer;
+        }
+
+        .main-contaier button:hover {
+            background-color: #060806d1;
+            color: white;
+        }
+
+        .info {
+            margin-bottom: 40px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .forget {
+            font-weight: 600;
+        }
+
+        .remember-feild {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #remember {
+            background: transparent;
+            margin-bottom: 3px;
+            cursor: pointer;
+        }
+
+        .register-div p {
+            text-align: center;
+            /* margin-bottom: 10px; */
+            margin-top: 20px;
+        }
+
+        .register-div p a {
+            font-weight: 600;
+            color: black;
+        }
+
+
+        @keyframes horizontal-shaking {
+            0% {
+                transform: translateX(0)
+            }
+
+            25% {
+                transform: translateX(2px)
+            }
+
+            50% {
+                transform: translateX(-2px)
+            }
+
+            75% {
+                transform: translateX(2px)
+            }
+
+            100% {
+                transform: translateX(0)
+            }
+        }
+
+
+
+
+        /* Submmit Page */
+
+        .submit-container {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bg-container {
+            width: 350px;
+            background-color: white;
+            padding: 50px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .bg-container .icon-error i {
+            font-size: 60px;
+            color: #f27474;
+        }
+
+        .bg-container .icon-error {
+            border: 8px solid #f27474;
+            padding: 40px;
+            border-radius: 50%;
+        }
+
+        .bg-container .valid-input {
+            font-size: 30px;
+        }
+
+        .bg-container .valid-error {
+            font-size: 20px;
+            font-weight: 100;
+        }
+
+        .ok-btn {
+            /* font-size: 18px; */
+            width: 50%;
+        }
+
+
+        .close-button {
+            position: absolute;
+            top: -1.5vw;
+            right: -32vw;
+        }
+
+        .close-button {
+            font-weight: 900;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .close-button img {
+            width: 50px;
+            z-index: 9999;
+        }
+
+
+
+
+
+        /* LOgin */
+        #login-main-container {
+            /* display: none; */
+        }
+
+        #login-main-container.active {
+            /* display: flex; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader">
+        <h2>0%</h2>
+    </div>
+
+    <div id="main">
+
+        <nav id="nav-bar" class="active">
+            <div class="nav-container">
+                <div class="left-nav">
+                    <video src="/Home Page1/image/nav img.mp4" loop autoplay muted></video>
+                    <div class="video-con">
+                        <span>Plat Reel!</span>
+                        <span>-01:08</span>
+                    </div>
+                </div>
+                <div class="right-nav">
+                    <h4 id="close-menu-btn">Close</h4>
+                    <ul>
+                        <a href="/Animeted WebSite/code/index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="/Animeted WebSite/other files/about/index.html">
+                            <li>About</li>
+                        </a href="/Animeted WebSite/other files/Feature/index.html">
+                        <li>Feature</li>
+                        </a>
+                        <a class="active" href="#">
+                            <li>LogIn</li>
+                        </a>
+                        <a href="/Animeted WebSite/other files/Login & signup/signup.html">
+                            <li>Register</li>
+                        </a>
+                        <button>Take a Seat</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <div id="page1">
+            <div id="cursor">
+                <h5>Play!</h5>
+            </div>
+            <video src="/Home Page1/image/RJ-2.0-Video background .mp4" autoplay muted loop></video>
+            <div id="page1-content">
+
+                <nav>
+                    <h3>The Venture Agency</h3>
+                    <h4 id="open-menu-btn">Menu</h4>
+                    <!-- <h4 id="close-menu-btn">Close</h4> -->
+                </nav>
+
+                <section class="main-contaier" id="login-main-container">
+                    <div id="register" class="login-container register-container">
+                        <h2>LogIn</h2>
+                        <form id="login-form">
+
+                            <div class="input-container">
+                                <input type="email" id="login-email" placeholder="Email">
+                                <span class="icon"><i class="fa-regular fa-envelope"
+                                        id="login-emailIcon"></i></i></span>
+                                <span style="display: none;" id="login-tickIcon" class="icon tick"><i
+                                        class="fa-regular fa-circle-check"></i></span>
+                            </div>
+
+                            <div class="input-container">
+                                <input type="password" id="login-password" placeholder="Password">
+                                <span class="icon" id="login-passwordIcon" onclick="loginTogglePasswordVisibility()"><i
+                                        class="fa-regular fa-eye"></i></span>
+                            </div>
+
+                            <div class="info">
+                                <div class="remember-feild">
+                                    <input type="checkbox" name="remember" id="remember">
+                                    <label for="remember">Remember</label>
+                                </div>
+                                <div class="forget">
+                                    <p>Forgot Password?</p>
+                                </div>
+                            </div>
+                            <button type="submit" class="register-btn">Login</button>
+                            <div class="register-div">
+                                <p>Don't have an account? <a href="">LigIn</a></p>
+                            </div>
+
+                            <div id="login-close-button" class="close-button">
+                                <img src="https://img.icons8.com/?size=256&id=71200&format=png" alt="">
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <div class="register-submit-container submit-container" id="login-submit-container">
+                        <div class="bg-container">
+                            <div id="login-icon-error" class="register-icon-error icon-error">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div class="register-valid-input valid-input" id="login-valid-input">Enter Valid Input</div>
+                            <div class="register-valid-error valid-error" id="login-valid-error">Login error</div>
+                            <button class="ok-btn" id="login-ok-btn">Ok</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+        integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/Animeted WebSite/code/script.js"></script>
+
+
+    <script>
+        function loginTogglePasswordVisibility() {
+            var passwordInput = document.getElementById("login-password");
+            var passwordIcon = document.getElementById("login-passwordIcon");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordIcon.innerHTML = '<i class="fa-regular fa-eye-slash"></i>'
+            } else {
+                passwordInput.type = "password";
+                passwordIcon.innerHTML = '<i class="fa-regular fa-eye"></i>'
+            }
+        }
+
+
+
+
+        const LoginTickEmailIcon = document.querySelector("#login-tickIcon");
+        const LoginEmailInput = document.querySelector("#login-email");
+        const LoginEmailIcon = document.querySelector("#login-emailIcon");
+        let LoginEmailIsValid = false;
+
+        LoginEmailInput.addEventListener('keyup', () => {
+            loginEmailValidate();
+            // console.log(emailInput.value);
+        });
+        function loginEmailValidate() {
+            let emailValue = LoginEmailInput.value.trim();
+            LoginEmailIsValid = /\S+@\S+\.\S+/.test(emailValue);
+            if (LoginEmailIsValid) {
+                LoginTickEmailIcon.style.display = 'block';
+                LoginEmailIcon.style.display = 'none'
+                LoginTickEmailIcon.style.color = '#7114ff'
+                LoginEmailIcon.style.animation = "";
+            } else {
+                LoginTickEmailIcon.style.display = 'none';
+                LoginEmailIcon.style.display = 'block'
+                LoginEmailIcon.style.animation = "horizontal-shaking .2s 5 ";
+                LoginEmailIcon.style.color = "red";
+            }
+        }
+
+
+
+        const loginPasswordInput = document.querySelector("#login-password");
+        const loginPasswordIcon = document.querySelector("#login-passwordIcon");
+        let loginPasswordIsValid = false;
+        loginPasswordInput.addEventListener('keyup', validatePassword)
+        function validatePassword() {
+            var passwordValue = loginPasswordInput.value.trim();
+            loginPasswordIsValid = passwordValue.length >= 8;
+
+            if (loginPasswordIsValid) {
+                loginPasswordIcon.style.animation = "";
+                loginPasswordIcon.style.color = "#7114ff";
+            } else {
+                loginPasswordIcon.style.animation = "horizontal-shaking .2s 5 ";
+                loginPasswordIcon.style.color = "red";
+            }
+        }
+
+
+
+
+
+
+        function loginAfterSubmitPage() {
+            const loginSubmitPage = document.querySelector('#login-submit-container');
+            const loginErrorIcon = document.querySelector('#login-icon-error');
+            const validateInputError = document.querySelector('#login-valid-input');
+            const loginError = document.querySelector('#login-valid-error');
+            const LoginErrorIconContainer = document.querySelector('#login-icon-error');
+
+            if (LoginEmailIsValid && loginPasswordIsValid) {
+                loginSubmitPage.style.display = 'flex';
+                // loginSubmitPage.innerHTML = 'Loginnnnnnnnn';
+
+                loginContainer.style.display = 'none';
+                loginErrorIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
+                loginErrorIcon.style.color = 'Green'
+                LoginErrorIconContainer.style.borderColor = 'green';
+                validateInputError.innerHTML = 'Login successfully';
+                loginError.innerHTML = 'Go to your profile page';
+                errorIconContainer.style.borderColor = 'rgb(0, 195, 0)'
+            } else {
+                loginSubmitPage.style.display = 'flex';
+                loginContainer.style.display = 'none';
+            }
+
+
+
+        }
+
+
+        const loginSubmitPageBtn = document.querySelector('#login-ok-btn');
+        loginSubmitPageBtn.onclick = onload;
+        function onload() {
+            window.location.reload();
+        }
+
+
+        const loginForm = document.querySelector('#login-form');
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            loginAfterSubmitPage();
+        });
+
+
+
+
+
+
+        // const registerConatiner = document.querySelector('#register-container');
+
+
+    </script>
+
+</body>
+
+</html>
